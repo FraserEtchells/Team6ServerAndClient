@@ -42,8 +42,9 @@ import {
 import MainMenu from '../Components/MainMenu';
 import Quiz from '../Components/Quiz';
 import openSocket from "socket.io-client";
+import io from "socket.io-client";
 
-const socket = openSocket("http://demoteam6.azurewebsites.net");
+const socket = io.connect("http://demoteam6.azurewebsites.net");
 /*const socket = openSocket("http://localhost:4000");*/
   
 
