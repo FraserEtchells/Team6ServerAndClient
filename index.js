@@ -18,6 +18,7 @@ const express = require('express');
 const socketio = require('socket.io');
 var mongo = require('mongodb');
 var assert = require('assert');
+var cors = require('cors');
 
 var url='mongodb://team6-mongodb:4LITWMsMLAzi1w4rZbuOo0wgaaUlFk0nO3WMj1riXjsnL0rkZqmRgeX0oVnWTHOhlOgr7NX6H97S00pwfgWxlA==@team6-mongodb.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@team6-mongodb@'
 
@@ -25,6 +26,8 @@ var url='mongodb://team6-mongodb:4LITWMsMLAzi1w4rZbuOo0wgaaUlFk0nO3WMj1riXjsnL0r
 const app = express();
 const server =http.createServer(app);
 const io = socketio(server);
+
+app.use(cors())
 
 // Set static folder
 app.use(express.static(path.join(__dirname, 'build')));
