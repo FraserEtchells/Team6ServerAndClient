@@ -43,7 +43,7 @@ import MainMenu from '../Components/MainMenu';
 import Quiz from '../Components/Quiz';
 import openSocket from "socket.io-client";
 
-const socket= openSocket("http://localhost:4000");
+const socket = openSocket("http://demoteam6.azurewebsites.net");
   
 
 
