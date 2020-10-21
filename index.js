@@ -33,7 +33,25 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 var Lobbies={};
 
-var question=[];
+var question = [{
+    "id": 1,
+    "question": "How many E's in Green",
+    "answer_a": 3,
+    "answer_b": 2,
+    "answer_c": 6,
+    "answer_d": 1,
+    "correct_ans": 2
+},
+{
+    "id": 1,
+    "question": "How many E's in Green",
+    "answer_a": 3,
+    "answer_b": 2,
+    "answer_c": 6,
+    "answer_d": 1,
+    "correct_ans": 2
+}
+];
 var idquestionsAlreadyAsked=[]
 
 
