@@ -21,8 +21,6 @@ const io = socketio(server);
 // Set static folder
 
 app.use(express.static(path.join(__dirname, "build")));
-app.use("/Quiz", express.static("build"));
-app.use("/Leaderboard", express.static("build"));
 
 
 var Lobbies={};
