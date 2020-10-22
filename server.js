@@ -25,7 +25,6 @@ var url='mongodb://team6-mongodb:4LITWMsMLAzi1w4rZbuOo0wgaaUlFk0nO3WMj1riXjsnL0r
 
 const app = express();
 const server = http.createServer(app);
-const io = socketio.listen(server);
 
 app.use(cors());
 
@@ -33,7 +32,7 @@ app.use(cors());
 
 /*app.use(express.static(path.join(__dirname, "build")));*/
 
-app.get('', (req, res) => {
+app.get('/', (req, res) => {
     var today = new Date()
 
     res.send(today)
@@ -41,3 +40,9 @@ app.get('', (req, res) => {
 
 console.log("Listening on port: " +  port );
 server.listen(port)
+
+const io = socketio.listen(server);
+
+io.on('connection', (socket) => {
+    console.log('a user connected');
+});
