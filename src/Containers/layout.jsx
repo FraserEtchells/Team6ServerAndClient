@@ -44,7 +44,7 @@ import Quiz from '../Components/Quiz';
 import openSocket from "socket.io-client";
 import io from "socket.io-client";
 
-const socket = io();
+const socket = io("http://demoteam6.azurewebsites.net:80");
 /*const socket = openSocket("http://localhost:4000");*/
   
 
