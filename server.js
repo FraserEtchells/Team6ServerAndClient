@@ -20,7 +20,7 @@ const io = socketio(server);
 
 // Set static folder
 
-app.use(express.static(path.join(__dirname, "build")));
+app.use(express.static(__dirname + "build"));
 
 
 var Lobbies={};
@@ -132,7 +132,7 @@ function updateScore(id,code,scoreToAdd){
       }
 }
 
-async function loadQuestionPre(numberOfRounds){
+/*async function loadQuestionPre(numberOfRounds){
   mongo.connect(url, function(err, db){
     if(err){
       console.log("We have an error1");
@@ -181,6 +181,7 @@ async function loadQuestionPre(numberOfRounds){
 
   })
 }
+*/
 
 
 async function loadQuestion(numberOfRounds, code){
