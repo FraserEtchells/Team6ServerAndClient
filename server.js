@@ -184,7 +184,7 @@ function updateScore(id,code,scoreToAdd){
 */
 
 
-async function loadQuestion(numberOfRounds, code){
+/*async function loadQuestion(numberOfRounds, code){
   mongo.connect(url, function(err, db){
     if(err){
       console.log("We have an error1");
@@ -233,6 +233,7 @@ async function loadQuestion(numberOfRounds, code){
 
   })
 }
+*/
 
 
 
