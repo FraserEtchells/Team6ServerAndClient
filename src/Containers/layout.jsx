@@ -22,7 +22,7 @@
 //             <Route path="/quiz" component={() => <Quiz socket={socket} />} />
             
            
-//         </Switch>
+//         </Switch>AS
 //     </React.Fragment>
     
 //   );
@@ -45,9 +45,9 @@ import openSocket from "socket.io-client";
 import io from "socket.io-client";
 import socketIOClient from "socket.io-client";
 
-/*const socket = io("http://demoteam6.azurewebsites.net:80");*/
+const socket = io({ transports: ['websocket'] });
 /*const socket = openSocket("http://localhost:4000");*/
-const socket = socketIOClient("http://demoteam6.azurewebsites.net:80");
+/*const socket = socketIOClient("http://demoteam6.azurewebsites.net:80");*/
   
 
 
