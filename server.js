@@ -24,8 +24,8 @@ var url='mongodb://team6-mongodb:4LITWMsMLAzi1w4rZbuOo0wgaaUlFk0nO3WMj1riXjsnL0r
 
 
 const app = express();
-const server =http.createServer(app);
-const io = socketio(server);
+const server = http.createServer(app);
+const io = socketio.listen(server);
 
 app.use(cors());
 
