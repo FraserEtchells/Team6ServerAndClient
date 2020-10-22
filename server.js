@@ -31,6 +31,7 @@ app.use(cors());
 
 // Set static folder
 
+app.use(express.static(path.join(__dirname, "build")));
 
 
 var Lobbies={};
