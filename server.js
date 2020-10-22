@@ -31,7 +31,7 @@ app.use(cors());
 
 // Set static folder
 
-app.use(express.static(path.join(__dirname, "build")));
+/*app.use(express.static(path.join(__dirname, "build")));*/
 
 app.get('', (req, res) => {
     var today = new Date()
@@ -40,4 +40,5 @@ app.get('', (req, res) => {
 
 })
 
+console.log("Listening on port: " +  port );
 app.listen(port)
