@@ -37,8 +37,7 @@ app.get('', (req, res) => {
     var today = new Date()
 
     res.send(today)
-
 })
 
 console.log("Listening on port: " +  port );
-app.listen(port)
+server.listen(port)
